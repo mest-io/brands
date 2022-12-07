@@ -15,11 +15,17 @@
           "umd",
           "cjs"
         ],
-        "outputPath": "dist/packages/brands",
+        "project": "packages/brands/package.json",
         "main": "packages/brands/src/index.ts",
+        "entryFile": "packages/brands/src/index.ts",
+        "outputPath": "dist/packages/brands",
         "tsConfig": "packages/brands/tsconfig.lib.json",
         "assets": [
-          "packages/brands/*.md"
+          {
+            "glob": "README.md",
+            "input": ".",
+            "output": "."
+          }
         ]
       }
     },
