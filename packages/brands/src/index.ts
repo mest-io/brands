@@ -1,9 +1,9 @@
 // @ts-ignore
 export { LogoCardHorizontalDark } from './components/LogoCardHorizontalDark'
 // @ts-ignore
-export { LogoCardHorzontalLight } from './components/LogoCardHorzontalLight'
+export { LogoCardHorizontalLight } from './components/LogoCardHorizontalLight'
 // @ts-ignore
-export { LogoHorizontalBlack } from './components/LogoHorizontalBlack'
+export { LogoHorizontalDark } from './components/LogoHorizontalDark'
 // @ts-ignore
 export { LogoHorizontalLight } from './components/LogoHorizontalLight'
 // @ts-ignore

@@ -7,6 +7,7 @@ function BrandsApp({ Component, pageProps }: AppProps) {
     <>
       <Head>
         <title>Welcome to portal!</title>
+        <link rel="apple-touch-icon" sizes="120x120" href="/favicon.png" />
       </Head>
       <main className="app">
         <Component {...pageProps} />

@@ -1,3 +1,12 @@
+import {
+  LogoCardHorizontalDark,
+  LogoCardHorizontalLight,
+  LogoHorizontalDark,
+  LogoHorizontalLight,
+  LogoVerticalDark,
+  LogoVerticalLight,
+} from '@mest-fe/brands'
+
 export function Index() {
   /*
    * Replace the elements below with your own.
@@ -6,7 +15,12 @@ export function Index() {
    */
   return (
     <div>
-
+      <LogoCardHorizontalDark />
+      <LogoCardHorizontalLight />
+      <LogoHorizontalDark />
+      <LogoHorizontalLight />
+      <LogoVerticalDark />
+      <LogoVerticalLight />
     </div>
   )
 }
