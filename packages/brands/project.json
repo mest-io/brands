@@ -22,7 +22,12 @@
         "tsConfig": "packages/brands/tsconfig.lib.json",
         "assets": [
           {
-            "glob": "README.md",
+            "glob": "packages/brands/README.md",
+            "input": ".",
+            "output": "."
+          },
+          {
+            "glob": "packages/brands/src/assets/**/*.svg",
             "input": ".",
             "output": "."
           }
