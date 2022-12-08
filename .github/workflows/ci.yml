@@ -13,7 +13,7 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: 18
-      - run:
+      - run: |
           yarn
           yarn test
           yarn build
