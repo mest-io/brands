@@ -4,7 +4,16 @@
   "sourceRoot": "packages/brands/src",
   "projectType": "library",
   "targets": {
+    "svg": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "svgo-jsx packages/brands/svgo-jsx.config.mjs"
+      }
+    },
     "build": {
+      "dependsOn": [
+        "svg"
+      ],
       "executor": "@nrwl/web:rollup",
       "outputs": [
         "{options.outputPath}"
@@ -27,7 +36,7 @@
             "output": "."
           },
           {
-            "glob": "packages/brands/src/assets/**/*.svg",
+            "glob": "packages/brands/src/svgs/*.svg",
             "input": ".",
             "output": "."
           }

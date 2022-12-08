@@ -3,5 +3,8 @@
   "version": "0.0.1",
   "main": "./index.umd.js",
   "module": "./index.esm.js",
-  "typings": "./index.d.ts"
+  "typings": "./index.d.ts",
+  "peerDependencies": {
+    "react": "~17 || ~18"
+  }
 }
