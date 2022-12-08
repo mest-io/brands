@@ -1,9 +1,13 @@
 {
   "name": "@mest-fe/brands",
   "version": "0.0.1",
-  "main": "./index.umd.js",
-  "module": "./index.esm.js",
-  "typings": "./index.d.ts",
+  "main": "index.js",
+  "module": "index.es.js",
+  "umd": "index.umd.js",
+  "files": [
+    "svgs/*.svg",
+    "*.js"
+  ],
   "peerDependencies": {
     "react": "~17 || ~18"
   }
