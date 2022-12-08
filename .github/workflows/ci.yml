@@ -14,5 +14,6 @@ jobs:
         with:
           node-version: 18
       - run:
+          yarn
           yarn test
           yarn build
