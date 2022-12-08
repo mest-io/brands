@@ -8,7 +8,7 @@
     "build:all": "nx run-many --target=build --projects=brands,portal,docs",
     "build:portal": "nx run portal:build",
     "build:libs": "nx run brands:build",
-    "lint": "nx run lint --fix",
+    "lint": "nx run-many --target=lint --projects=portal,docs --fix",
     "test": "nx run-many --target=test --projects=brands,portal,docs"
   },
   "private": true,
@@ -26,6 +26,8 @@
   },
   "devDependencies": {
     "@babel/preset-react": "^7.14.5",
+    "@mest-fe/eslint-config-react": "^0.2.0",
+    "@mest-fe/eslint-config-ts": "^0.2.0",
     "@mest-fe/prettier": "^0.1.0",
     "@nrwl/cypress": "15.3.0",
     "@nrwl/eslint-plugin-nx": "15.3.0",
