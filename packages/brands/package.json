@@ -5,9 +5,16 @@
   "module": "index.es.js",
   "umd": "index.umd.js",
   "files": [
+    "esm/*",
     "svgs/*.svg",
     "*.js"
   ],
+  "license": "MIT",
+  "homepage": "https://brands.mest.io",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mest-io/brands"
+  },
   "peerDependencies": {
     "react": "~17 || ~18"
   }

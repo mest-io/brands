@@ -7,11 +7,14 @@ import copy from 'rollup-plugin-copy'
 import del from 'rollup-plugin-delete'
 
 import path from 'node:path'
+import fs from 'node:fs'
 
 const root = path.join(__dirname, './')
 const entryPath = path.join(root, 'src', 'index.ts')
 const tsconfigPath = path.join(root, 'tsconfig.lib.json')
 const distPath = path.join(root, '../../', 'dist', 'packages', 'brands')
+
+const componentsPath = path.join(root, 'src', 'components')
 
 const extensions = ['.js', '.jsx', '.ts', '.tsx']
 
@@ -30,14 +33,17 @@ export default [
   {
     plugins: [
       del({
-        targets:[
-          distPath
-        ]
+        targets: [distPath],
       }),
       copy({
         targets: convertCopyAssetsToRollupOptions(distPath, [
           {
             glob: 'packages/brands/README.md',
+            input: '.',
+            output: '.',
+          },
+          {
+            glob: 'packages/brands/LICENSE',
             input: '.',
             output: '.',
           },
@@ -128,4 +134,34 @@ export default [
       },
     ],
   },
+  // build for each component
+  ...fs.readdirSync(componentsPath).map(componentFilePath => {
+    const filePath = path.join(root, 'src', 'components', componentFilePath)
+    return {
+      plugins: [
+        resolve(),
+        typescript({
+          check: true,
+          tsconfig: tsconfigPath,
+        }),
+        resolve({
+          preferBuiltins: true,
+          extensions,
+        }),
+        babel({
+          babelHelpers: 'runtime',
+          extensions,
+          exclude: '**/node_modules/**',
+        }),
+        commonjs(),
+      ],
+      input: filePath,
+      output: [
+        {
+          file: `${path.join(distPath, 'esm', componentFilePath)}`,
+          format: 'cjs',
+        },
+      ],
+    }
+  }),
 ]
