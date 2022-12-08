@@ -4,10 +4,12 @@
   "license": "MIT",
   "scripts": {
     "serve": "nx serve portal",
-    "build": "nx run portal:build",
-    "build:apps": "nx run portal:build",
+    "build": "nx run-many --target=build --projects=brands,portal,docs",
+    "build:all": "nx run-many --target=build --projects=brands,portal,docs",
+    "build:portal": "nx run portal:build",
     "build:libs": "nx run brands:build",
-    "lint": "nx run lint --fix"
+    "lint": "nx run lint --fix",
+    "test": "nx run-many --target=test --projects=brands,portal,docs"
   },
   "private": true,
   "prettier": "@mest-fe/prettier",
