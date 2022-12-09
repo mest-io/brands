@@ -43,6 +43,7 @@ const babelOptions = {
     '@babel/preset-typescript',
     '@babel/preset-react',
   ],
+  plugins: ['@babel/plugin-transform-runtime'],
   extensions: extensions,
   exclude: '**/node_modules/**',
 }
@@ -66,10 +67,6 @@ const convertCopyAssetsToRollupOptions = (outputPath, assets) => {
       }))
     : undefined
 }
-
-const outputName = path.join(distPath, 'index')
-
-
 
 export default [
   {
@@ -106,20 +103,20 @@ export default [
     input: entryPath,
     output: [
       {
-        file: `${outputName}.js`,
+        file: `${path.join(distPath, 'cjs', 'index.js')}`,
         format: 'cjs',
         sourcemap: true,
         globals,
       },
       {
-        file: `${outputName}.umd.js`,
-        name: `${outputName}`,
+        file: `${path.join(distPath, 'umd', 'index.js')}`,
+        name: 'brands',
         format: 'umd',
         sourcemap: true,
         globals,
       },
       {
-        file: `${outputName}.esm.js`,
+        file: `${path.join(distPath, 'esm', 'index.js')}`,
         format: 'esm',
         sourcemap: true,
         globals,
@@ -132,20 +129,20 @@ export default [
     input: entryPath,
     output: [
       {
-        file: `${outputName}.min.js`,
+        file: `${path.join(distPath, 'cjs', 'index.min.js')}`,
         format: 'cjs',
         sourcemap: true,
         globals,
       },
       {
-        file: `${outputName}.umd.min.js`,
-        name: `${outputName}`,
+        file: `${path.join(distPath, 'umd', 'index.min.js')}`,
+        name: 'brands',
         format: 'umd',
         sourcemap: true,
         globals,
       },
       {
-        file: `${outputName}.esm.min.js`,
+        file: `${path.join(distPath, 'esm', 'index.min.js')}`,
         format: 'esm',
         sourcemap: true,
         globals,

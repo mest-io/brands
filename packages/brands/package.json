@@ -1,9 +1,9 @@
 {
   "name": "@mest-fe/brands",
   "version": "0.0.1",
-  "main": "index.js",
-  "module": "index.es.js",
-  "umd": "index.umd.js",
+  "main": "./cjs/index.js",
+  "module": "./esm/index.js",
+  "umd": "./umd/index.js",
   "files": [
     "cjs/*",
     "esm/*",
