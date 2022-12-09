@@ -1,6 +1,6 @@
 import * as React from 'react'
 
-export const AppFooter: React.FC = () => {
+export const AppFooter = () => {
   return (
     <footer>
       <style jsx>{`
