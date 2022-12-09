@@ -5,6 +5,7 @@
   "module": "index.es.js",
   "umd": "index.umd.js",
   "files": [
+    "cjs/*",
     "esm/*",
     "svgs/*.svg",
     "*.js"
