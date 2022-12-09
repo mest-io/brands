@@ -1,0 +1,79 @@
+{
+  "name": "brands",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "packages/brands/src",
+  "projectType": "library",
+  "targets": {
+    "svg": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "svgo-jsx packages/brands/svgo-jsx.config.mjs"
+      }
+    },
+    "build": {
+      "dependsOn": [
+        "svg"
+      ],
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "rollup --config packages/brands/rollup.config.js"
+      }
+    },
+    "legacyRollup": {
+      "dependsOn": [
+        "svg"
+      ],
+      "executor": "@nrwl/web:rollup",
+      "outputs": [
+        "{options.outputPath}"
+      ],
+      "options": {
+        "format": [
+          "esm",
+          "umd",
+          "cjs"
+        ],
+        "project": "packages/brands/package.json",
+        "main": "packages/brands/src/index.ts",
+        "entryFile": "packages/brands/src/index.ts",
+        "outputPath": "dist/packages/brands",
+        "tsConfig": "packages/brands/tsconfig.lib.json",
+        "assets": [
+          {
+            "glob": "packages/brands/README.md",
+            "input": ".",
+            "output": "."
+          },
+          {
+            "glob": "packages/brands/src/svgs/*.svg",
+            "input": ".",
+            "output": "./svgs"
+          }
+        ]
+      }
+    },
+
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": [
+        "{options.outputFile}"
+      ],
+      "options": {
+        "lintFilePatterns": [
+          "packages/brands/**/*.ts"
+        ]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": [
+        "{workspaceRoot}/coverage/{projectRoot}"
+      ],
+      "options": {
+        "jestConfig": "packages/brands/jest.config.ts",
+        "passWithNoTests": true
+      }
+    }
+  },
+  "tags": []
+}

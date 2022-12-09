@@ -1,0 +1,46 @@
+name: publish-libs
+
+on:
+  release:
+    types: [created]
+
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 18
+      - run: |
+          yarn
+          yarn test
+          yarn build
+  publish:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 18
+      - name: Set Dist Tag
+        run: |
+          case "${{github.event.release.name}}" in
+          *"rc"* | *"canary"*)
+           echo "r_tag=canary" >> $GITHUB_ENV;;
+          *"dev"*)
+           echo "r_tag=dev" >> $GITHUB_ENV;;
+          *"beta"*)
+           echo "r_tag=beta" >> $GITHUB_ENV;;
+          *)
+           echo "r_tag=latest" >> $GITHUB_ENV;;
+          esac
+      - name: Publish To NPM
+        run: |
+          echo ">> dist-tag: ${{ env.r_tag }}"
+          cd dist/packages/brands
+          yarn publish --access public --non-interactive --tag ${{ env.r_tag }}
+        env:
+          NPM_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
