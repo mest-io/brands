@@ -1,8 +1,6 @@
 import * as React from 'react'
 
-type AppFooterProps = {}
-
-export const AppFooter: React.FC<AppFooterProps> = () => {
+export const AppFooter: React.FC = () => {
   return (
     <footer>
       <style jsx>{`

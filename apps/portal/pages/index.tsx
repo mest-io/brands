@@ -133,7 +133,6 @@ export const Index = ({ pageProps }) => {
             preserveAspectRatio="xMidYMid meet"
             width="440"
             height="340"
-            viewBox={'0 0 2500 1085'}
           />
         </Grid>
       </Grid>

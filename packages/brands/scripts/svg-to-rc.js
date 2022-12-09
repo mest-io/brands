@@ -26,6 +26,7 @@ const generateReactSvgComponent = svgFileName => {
     {
       plugins: ['@svgr/plugin-svgo', '@svgr/plugin-jsx', '@svgr/plugin-prettier'],
       typescript: true,
+      dimensions: false,
     },
     { componentName },
   )

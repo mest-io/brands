@@ -2,8 +2,7 @@ import * as React from 'react'
 import { SVGProps } from 'react'
 const LogoVerticalDark = (props: SVGProps<SVGSVGElement>) => (
   <svg
-    width={916}
-    height={882}
+    viewBox="0 0 916 882"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
     {...props}>

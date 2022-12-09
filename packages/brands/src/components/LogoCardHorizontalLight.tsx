@@ -2,8 +2,7 @@ import * as React from 'react'
 import { SVGProps } from 'react'
 const LogoCardHorizontalLight = (props: SVGProps<SVGSVGElement>) => (
   <svg
-    width={2500}
-    height={1085}
+    viewBox="0 0 2500 1085"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
     {...props}>

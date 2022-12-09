@@ -1,14 +1,12 @@
+import * as React from 'react'
 import { PropsWithChildren } from 'react'
 import { useMestTheme } from '@mest-fe/ui'
 import { AppHeader } from '../app-header/app-header'
 import { AppContainerSection } from './app-container-section'
 import { AppFooter } from '../app-footer/app-footer'
 
-export type AppContainerProps = {}
 
-export const AppContainer: React.FC<PropsWithChildren<AppContainerProps>> = ({
-  children,
-}) => {
+export const AppContainer: React.FC<PropsWithChildren> = ({ children }) => {
   const { colors } = useMestTheme()
 
   return (

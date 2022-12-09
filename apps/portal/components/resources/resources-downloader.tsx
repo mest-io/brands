@@ -13,7 +13,7 @@ interface DownloadButtonProps {
 }
 
 const downloadFromUrl = (url: string, download: string) => {
-  let downloadHref = document.createElement('a')
+  const downloadHref = document.createElement('a')
   downloadHref.href = url
   downloadHref.download = download
   downloadHref.click()
@@ -33,28 +33,24 @@ export const ResourcesDownloader: React.FC = () => {
         <Grid xs={12} sm={6}>
           <LogoHorizontalLight
             height={320}
-            viewBox={'0 0 1830 463'}
             preserveAspectRatio="xMidYMid meet"
           />
         </Grid>
         <Grid xs={12} sm={6}>
           <LogoHorizontalDark
             height={320}
-            viewBox={'0 0 1830 463'}
             preserveAspectRatio="xMidYMid meet"
           />
         </Grid>
         <Grid xs={12} sm={6}>
           <LogoVerticalLight
             height={320}
-            viewBox={'0 0 916 882'}
             preserveAspectRatio="xMidYMid meet"
           />
         </Grid>
         <Grid xs={12} sm={6}>
           <LogoVerticalDark
             height={320}
-            viewBox={'0 0 916 882'}
             preserveAspectRatio="xMidYMid meet"
           />
         </Grid>

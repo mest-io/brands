@@ -25,7 +25,6 @@ export const AppHeader = () => {
         preserveAspectRatio="xMidYMid meet"
         width="150"
         height="80"
-        viewBox={'0 0 1830 463'}
       />
       <Box
         css={{
