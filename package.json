@@ -21,7 +21,7 @@
     "react-dom": "18.2.0",
     "react-router-dom": "6.4.3",
     "regenerator-runtime": "0.13.7",
-    "styled-jsx": "5.1.0",
+    "styled-jsx": "^5.1.0",
     "tslib": "^2.3.0"
   },
   "devDependencies": {
