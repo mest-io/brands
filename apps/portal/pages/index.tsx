@@ -121,68 +121,6 @@ export const Index = ({ pageProps }) => {
   return (
     <>
       <AppContainerSection>
-        <Banner
-          label={'Media Kit'}
-          title={'Brand Values'}
-          subtitle={'Open, Composable and Connectable'}
-        />
-      </AppContainerSection>
-      <AppContainerSection>
-        <Grid
-          container
-          css={{
-            padding: '65px 0',
-            flexDirection: 'row',
-            '@sm': {
-              padding: '35px 0',
-            },
-            '@xs': {
-              padding: '35px 0',
-              flexDirection: 'column-reverse',
-            },
-          }}>
-          <Grid xs={24} sm={12} md={10} direction="column">
-            <MediaTextBox>
-              <Text
-                h2
-                css={{
-                  fontWeight: 'bold',
-                  fontSize: '3.5rem',
-                  lineHeight: 1.25,
-                  color: '$accents_9',
-
-                  '@md': {
-                    fontSize: '3rem',
-                  },
-                  '@sm': {
-                    fontSize: '2.5rem',
-                  },
-                  '@xs': {
-                    fontSize: '2rem',
-                  },
-                }}>
-                {'Media Kit'}
-              </Text>
-              <MediaText>
-                {
-                  'Mest will provide you with best practice examples for the media kit and various types of logos.'
-                }
-              </MediaText>
-            </MediaTextBox>
-          </Grid>
-          <Grid xs={24} sm={12} md={14}>
-            <Image
-              draggable={false}
-              width="695px"
-              height="248px"
-              alt="Large logo variants"
-              src="/assets/logo-variants-media-large.png"
-              css={{ maxWidth: '95%', userSelect: 'none' }}
-            />
-          </Grid>
-        </Grid>
-      </AppContainerSection>
-      <AppContainerSection>
         <ResourcesDownloader />
       </AppContainerSection>
     </>
