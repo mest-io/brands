@@ -1,6 +1,7 @@
 {
   "compilerOptions": {
     "moduleResolution": "node",
+    "declaration": true,
     "jsx": "react",
     "allowJs": true,
     "noImplicitAny": false,

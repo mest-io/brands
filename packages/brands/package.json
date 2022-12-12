@@ -1,9 +1,10 @@
 {
   "name": "@mest-fe/brands",
-  "version": "0.0.1",
+  "version": "0.0.2-dev",
   "main": "./cjs/index.js",
   "module": "./esm/index.js",
   "umd": "./umd/index.js",
+  "types": "./cjs/index.d.ts",
   "files": [
     "cjs/*",
     "esm/*",
@@ -17,6 +18,6 @@
     "url": "https://github.com/mest-io/brands"
   },
   "peerDependencies": {
-    "react": "~17 || ~18"
+    "react": "*"
   }
 }
