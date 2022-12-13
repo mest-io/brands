@@ -17,14 +17,21 @@
     ]
   },
   "include": [
-    "src/**/*.ts",
-    "src/**/*.tsx",
-    "src/**/*.js",
-    "src/**/*.jsx",
+    "**/*.ts",
+    "**/*.tsx",
+    "**/*.js",
+    "**/*.jsx",
     "next-env.d.ts"
   ],
   "exclude": [
     "node_modules",
     "jest.config.ts"
+  ],
+  "files": [
+    "../../node_modules/@nrwl/react/typings/styled-jsx.d.ts",
+    "../../node_modules/@nrwl/react/typings/cssmodule.d.ts",
+    "../../node_modules/@nrwl/react/typings/image.d.ts"
+  ],
+  "references": [
   ]
 }
