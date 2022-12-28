@@ -7,7 +7,7 @@
     "svg": {
       "executor": "nx:run-commands",
       "options": {
-        "command": "svgo-jsx packages/brands/svgo-jsx.config.mjs"
+        "command": "node packages/brands/scripts/svg-to-rc.js"
       }
     },
     "build": {
@@ -52,7 +52,6 @@
         ]
       }
     },
-
     "lint": {
       "executor": "@nrwl/linter:eslint",
       "outputs": [
