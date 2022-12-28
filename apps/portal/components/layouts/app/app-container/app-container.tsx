@@ -26,8 +26,8 @@ export const AppContainer: React.FC<PropsWithChildren> = ({ children }) => {
           display: flex;
           flex-direction: column;
           margin: 0 auto;
-          border-left: 1px solid ${colors.border.value};
-          border-right: 1px solid ${colors.border.value};
+          border-left: 1px solid ${colors.minors_4.value};
+          border-right: 1px solid ${colors.minors_4.value};
         }
 
         @media (max-width: 640px) {
