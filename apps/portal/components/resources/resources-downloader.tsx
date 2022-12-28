@@ -38,19 +38,20 @@ const copyToClipBoard = async (url: string) => {
 }
 
 const DOWNLOADABLE_RESOURCES = [
-  'resources/Mest-Black.png',
-  'resources/Mest-Black.svg',
-  'resources/Mest-Stack-Black.png',
-  'resources/Mest-Stack-Black.svg',
-  'resources/Mest-Stack-White.png',
-  'resources/Mest-Stack-White.svg',
-  'resources/Mest-White.png',
-  'resources/Mest-White.svg',
-  'resources/Mest-app-icon.png',
-  'resources/icon-rounded/Mest-icon-rounded.png',
-  'resources/icon-rounded/Mest-icon-rounded.svg',
-  'resources/icon-square/Mest-icon-square.png',
-  'resources/icon-square/Mest-icon-square.svg',
+  'resources/png_logo/Icon_Dark.png',
+  'resources/png_logo/Icon_Light.png',
+  'resources/png_logo/Icon_Rounded.png',
+  'resources/png_logo/Logo_Dark.png',
+  'resources/png_logo/Logo_Light.png',
+  'resources/png_logo/Stack_Dark.png',
+  'resources/png_logo/Stack_Light.png',
+  'resources/svg_logo/Icon_Dark.svg',
+  'resources/svg_logo/Icon_Light.svg',
+  'resources/svg_logo/Icon_Rounded.svg',
+  'resources/svg_logo/Logo_Dark.svg',
+  'resources/svg_logo/Logo_Light.svg',
+  'resources/svg_logo/Stack_Dark.svg',
+  'resources/svg_logo/Stack_Light.svg',
 ]
 
 const DownloadLink: React.FC<DownloadLinkProps> = props => {

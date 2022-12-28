@@ -14,7 +14,7 @@
   "private": true,
   "prettier": "@mest-fe/prettier",
   "dependencies": {
-    "@mest-fe/ui": "^0.0.1-dev.41",
+    "@mest-fe/ui": "^0.1.0",
     "core-js": "^3.6.5",
     "next": "13.0.0",
     "react": "18.2.0",
