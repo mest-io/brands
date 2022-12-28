@@ -4,7 +4,7 @@ import { Box, BoxProps, mixins } from '@mest-fe/ui'
 export const AppContainerSection: React.FC<BoxProps> = ({ css, children }) => {
   return (
     <Box
-      as="section"
+      as='section'
       css={mixins.css(
         {
           position: 'relative',
