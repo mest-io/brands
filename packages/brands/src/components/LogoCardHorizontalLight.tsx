@@ -1,5 +1,4 @@
-import React from 'react'
-import { SVGProps } from 'react'
+import React, { SVGProps } from 'react'
 const LogoCardHorizontalLight = (props: SVGProps<SVGSVGElement>) => (
   <svg
     viewBox="0 0 2500 1085"
