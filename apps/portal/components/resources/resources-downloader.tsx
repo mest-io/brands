@@ -1,16 +1,10 @@
-import * as React from 'react'
+import React from 'react'
 import { Button, Text, Link, Grid } from '@mest-fe/ui'
 import { useEffect, useState } from 'react'
-
-interface DownloadButtonProps {
-  url: string
-  download: string
-}
 
 interface DownloadLinkProps {
   url: string
 }
-
 
 const DEFAULT_BRANDS_HOST = 'https://brands.mest.io'
 const DEFAULT_COPIED_TIMEOUT = 3000
@@ -83,18 +77,13 @@ const CopyUrlLink: React.FC<DownloadLinkProps> = props => {
 
   return (
     <Button
-      scale={0.5}
       onClick={() => {
-        copyToClipBoard(props.url)
-          .then(() => {
-            setCopied(true)
-          })
+        copyToClipBoard(props.url).then(() => {
+          setCopied(true)
+        })
       }}
-      color={copied ? 'success' : 'default'}
-    >
-      {
-        copied ? 'Copied' : 'Copy'
-      }
+      color={copied ? 'success' : 'default'}>
+      {copied ? 'Copied' : 'Copy'}
     </Button>
   )
 }
@@ -102,17 +91,14 @@ const CopyUrlLink: React.FC<DownloadLinkProps> = props => {
 export const ResourcesDownloader: React.FC = () => {
   return (
     <Grid
-      direction='row'
+      direction="row"
       css={{
         marginLeft: '40px',
         marginTop: '20px',
         marginBottom: '20px',
       }}>
       {DOWNLOADABLE_RESOURCES.map((downloadUrl, index) => (
-        <Grid
-          key={`download-link-${index}`}
-          className={'download-section'}
-        >
+        <Grid key={`download-link-${index}`} className={'download-section'}>
           <DownloadLink url={downloadUrl} />
         </Grid>
       ))}

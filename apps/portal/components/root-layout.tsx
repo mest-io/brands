@@ -1,11 +1,12 @@
 import Head from 'next/head'
-import { AppContainer } from './app/app-container/app-container'
+import React from 'react'
+import { Box } from '@mest-fe/ui'
 
 export const RootLayout = ({ children }) => {
   return (
     <>
       <Head>
-        <title>Mest Brands</title>
+        <title>Mest Brands - All stories about blockchain</title>
         <meta charSet="utf-8" />
         <meta
           name="viewport"
@@ -19,13 +20,13 @@ export const RootLayout = ({ children }) => {
         <meta property="og:title" content="Mest Brands" />
         <meta
           property="og:description"
-          content="Mest makes it simple for you to analyse on-chain data and connect your readers."
+          content="Mest is a wallet tracker powered by the community that delivers diverse insights and connects people with blockchains."
         />
         <meta property="og:url" content="https://brands.mest.io" />
         <meta property="og:site_name" content="brands.mest.io" />
         <meta
           property="og:image"
-          content="https://mest.io/assets/images/shared_card.png"
+          content="https://og.mest.sh/blog?title=Mest%20Brands&subtitle=Open,%20Composable%20and%20Connectable"
         />
 
         <meta name="twitter:card" content="summary_large_image" />
@@ -34,14 +35,14 @@ export const RootLayout = ({ children }) => {
 
         <meta
           name="twitter:image"
-          content="https://mest.io/assets/images/shared_card.png"
+          content="https://og.mest.sh/blog?title=Mest%20Brands&subtitle=Open,%20Composable%20and%20Connectable"
         />
         <meta name="google" content="notranslate" />
         <link rel="apple-touch-icon" sizes="120x120" href="/favicon.png" />
         <link rel="dns-prefetch" href="https://brands.mest.io" />
       </Head>
       <>
-        <AppContainer>{children}</AppContainer>
+        <Box>{children}</Box>
       </>
     </>
   )
