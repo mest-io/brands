@@ -10,6 +10,20 @@ const componentsDir = path.join(libProjectRoot, 'src', 'components')
 
 const svgFiles = fs.readdirSync(svgsDir)
 
+const svgTsxTemplateFn = (variables, { tpl }) => {
+  return tpl`
+import React, { SVGProps } from 'react'
+
+${variables.interfaces};
+
+const ${variables.componentName} = (${variables.props}) => (
+  ${variables.jsx}
+);
+
+${variables.exports};
+`
+}
+
 const generateReactSvgComponent = svgFileName => {
   const componentName = path.basename(svgFileName, '.svg')
   const svgFilePath = path.join(svgsDir, svgFileName)
@@ -27,6 +41,7 @@ const generateReactSvgComponent = svgFileName => {
       plugins: ['@svgr/plugin-svgo', '@svgr/plugin-jsx', '@svgr/plugin-prettier'],
       typescript: true,
       dimensions: false,
+      template: svgTsxTemplateFn,
     },
     { componentName },
   )
