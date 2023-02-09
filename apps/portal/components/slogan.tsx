@@ -29,6 +29,7 @@ export const Slogan: React.FC<unknown> = () => {
               textAlign: 'center',
               lineHeight: '270px',
               fontWeight: 400,
+              cursor: 'default',
               '@xs': {
                 fontSize: '70px',
               },
@@ -58,6 +59,7 @@ export const Slogan: React.FC<unknown> = () => {
               padding: '0 10px',
               zIndex: 1,
               opacity: 0.8,
+              cursor: 'default',
 
               '&:before': {
                 content: '',
