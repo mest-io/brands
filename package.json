@@ -14,9 +14,10 @@
   "private": true,
   "prettier": "@mest-fe/prettier",
   "dependencies": {
-    "@mest-fe/ui": "^0.1.0",
+    "@mest-fe/ui": "^0.2.0-dev.26",
+    "@next/font": "^13.1.6",
     "core-js": "^3.6.5",
-    "next": "13.0.0",
+    "next": "^13.1.6",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-router-dom": "6.4.3",

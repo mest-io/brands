@@ -1,4 +1,4 @@
-import * as React from 'react'
+import React from 'react'
 import { SVGProps } from 'react'
 const LogoHorizontalLight = (props: SVGProps<SVGSVGElement>) => (
   <svg
